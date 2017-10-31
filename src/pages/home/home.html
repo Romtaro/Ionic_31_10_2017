@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1> {{ app.nom}} {{ app.version }} </h1>
+  <h3>Ionic</h3>
+
+
+  <ion-item>
+    <ion-label >Titre : </ion-label>
+    <ion-input type="text" [(ngModel)]="app.nom"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Version :</ion-label>
+    <ion-input type="text" [(ngModel)]="app.version"></ion-input>
+  </ion-item>
+
+  <ion-item>
+  <button color="danger" (click)=rename() ion-button large>Reboot</button>
+  <button color="yellow" (click)=increment() ion-button small> +1 </button>
+</ion-item>
+
+
+
+  <button ion-button secondary menuToggle>Menu</button>
+
+
+</ion-content>
